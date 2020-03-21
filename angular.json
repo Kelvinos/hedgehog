@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "hedgehog": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hedgehog"
+    }
+  },
+  "defaultProject": "hedgehog",
+  "cli": {
+    "analytics": "3fd539c8-7947-4232-a135-f6c104d1b71a"
+  }
 }
