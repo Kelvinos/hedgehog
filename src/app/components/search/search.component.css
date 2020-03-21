@@ -1,3 +1,17 @@
-body {
-    background-color: blueviolet;
+#search-component {
+    padding-top: 20%;
+    margin: auto;
+    max-width: fit-content;
+    /* background-color: yellowgreen; */
+}
+
+h4 {
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#search-box {
+    width: 200px;
+    height: 20px;
 }
