@@ -1,3 +1,8 @@
-body {
-    background-color: red;
+.fixed-header {
+  position: fixed;
+  top: 0;
+  background-color: #5e4955;
+}
+.span {
+  margin: auto;
 }
