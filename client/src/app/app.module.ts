@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
@@ -14,6 +14,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { MatButtonModule } from "@angular/material/button";
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    MainComponent
+    MainComponent,
+    CreateEmployeeComponent,
+    EmployeeDetailsComponent,
+    EmployeeListComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import { MatButtonModule } from "@angular/material/button";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
