@@ -9,8 +9,7 @@ import { MainComponent } from "./components/main/main.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
-// Material
+import { StoreModule } from '@ngrx/store';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
@@ -18,6 +17,10 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
+import { CurrencyService } from './services/currency.service'
+import { CurrencyEffects } from './effects/currencyEffects'
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     CreateEmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    CurrencyConverterComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +43,11 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([CurrencyEffects])
   ],
-  providers: [],
+  providers: [CurrencyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

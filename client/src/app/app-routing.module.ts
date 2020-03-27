@@ -6,6 +6,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 const routes: Routes = [
   { path: 'test', component: MainComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'add', component: CreateEmployeeComponent },
   { path: 'update/:id', component: UpdateEmployeeComponent },
   { path: 'details/:id', component: EmployeeDetailsComponent },
+  { path: 'currency', component: CurrencyConverterComponent },
 ]
 
 @NgModule({

@@ -1,0 +1,8 @@
+
+amount:
+<input [ngModel]="amount$ | async" (ngModelChange)="onAmountChange($event)" />
+<br><br>
+currency:
+<p *ngFor="let currency of (currencyRates$ | async)">
+    {{currency.code + ' ' + currency.value * (amount$ | async)}}
+</p>
