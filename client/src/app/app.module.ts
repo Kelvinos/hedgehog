@@ -17,6 +17,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { reducers } from './reducers/index';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 import { CurrencyService } from './services/currency.service'
 import { CurrencyEffects } from './effects/currencyEffects'
